@@ -1,0 +1,5 @@
+
+    if (sum<=cap )
+    {
+        ans = max(ans, profit);
+    }
