@@ -3,3 +3,14 @@
     {
         ans = max(ans, profit);
     }
+    
+    
+    https://vjudge.net/contest/408883#problem/B
+    
+    
+    
+    
+    
+    contest 1 ------ C number problem
+    
+    
