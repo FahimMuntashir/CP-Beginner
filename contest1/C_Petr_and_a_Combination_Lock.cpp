@@ -4,28 +4,28 @@ using namespace std;
 
 int main()
 {
-    int t;
-    cin >> t;
-    int sum = 0;
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
 
-    int n[t];
-    while (t--)
+    for (int mask = 0; mask < (1 << n); mask++)
     {
-        for (int i = 0; i < t; i++)
+        int sum = 0;
+
+        for (int i = 0; i < n; i++)
         {
-            cin >> n[i];
+            if (mask & (1 << i))
+                sum += arr[i];
+            else
+                sum -= arr[i];
         }
-        for (int i = 0; i < t; i++)
+        if (sum % 360 == 0)
         {
-            sum += n[i];
+            cout << "YES\n";
+            return 0;
         }
     }
-    if (sum % 360 == 0)
-    {
-        cout << "YES" << endl;
-    }
-    else
-    {
-        cout << "NO" << endl;
-    }
+    cout << "NO\n";
 }
